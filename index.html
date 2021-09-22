@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alperen Samil</title>
-    <link rel="manifest" href="manifest.json">c
 
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -39,7 +38,7 @@
                 </div>
 
                 <div class="left-column">
-                    <img id="profile_pic" src="images/WhatsApp Image 2021-01-20 at 3.05.34 PM.jpeg">
+                    <img alt="pp" id="profile_pic" src="images/me.jpeg">
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
                     <div id="theme-options-wrapper">
                         <div data-mode="light" id="light-mode" class="theme-dot"></div>
@@ -81,19 +80,19 @@
 
                     <h4>TOP EXPERTISE</h4>
 
-                    <p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="ingilizce-cv.pdf">Download Resume</a></p>
+                    <p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="images/Alperen's Resume.pdf">Download Resume</a></p>
 
                     <div id="skills">
                         <ul>
                             <li>Python</li>
-                            <li>Django</li>
+                            <li>Swift</li>
                             <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Postgres</li>
+                            <li>PHP</li>
+                            <li>Django</li>
                         </ul>
     
                         <ul>
-                            <li>Google Maps API</li>
+                            <li>Apple Maps API</li>
                             <li>JS Charts</li>
                             <li>AWS (RDS/S3)</li>
                             <li>Heroku</li>
@@ -113,6 +112,7 @@
                         <a target="_blank" href="https://twitter.com/alperensamil"> <img src="images/twitter.png" alt=""></a>
                         <a target="_blank" href="https://www.instagram.com/alperensamil/"> <img src="images/instagram.png " alt=""></a>
                         <a target="_blank" href="https://www.linkedin.com/in/alperen-şamil-ilmaz-91857219a/"><img src="images/linkedin.png " alt=""> </a>
+                        
                     </div>
                     
                 </div>
@@ -162,16 +162,16 @@
         <div class="main-container">
             <h3 style="text-align: center;">Get in Touch</h3>
             <form id="contact-form" action="">
-                <label for="">Name</label>
+                <label>Name</label>
                 <input class="input-field" type="text" name="name">
 
-                <label for="">Subject</label>
+                <label>Subject</label>
                 <input class="input-field" type="text" name="subject">
 
-                <label for="">Email</label>
+                <label>Email</label>
                 <input class="input-field" type="text" name="email">
 
-                <label for="">Message</label>
+                <label>Message</label>
                 <textarea class="input-field" name="message"></textarea>
 
 
@@ -181,50 +181,6 @@
     </section>
     
     <script src="script.js"></script>
-    <script type="text/javascript">
-	if ('serviceWorker' in navigator) {
-	  window.addEventListener('load', function() {
-	    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-	      // Registration was successful
-	      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-	    }, function(err) {
-	      // registration failed :(
-	      console.log('ServiceWorker registration failed: ', err);
-	    });
-	  });
-	}
-
-	let deferredPrompt;
-	var div = document.querySelector('.add-to');
-	var button = document.querySelector('.add-to-btn');
-	div.style.display = 'none';
-
-	window.addEventListener('beforeinstallprompt', (e) => {
-	  // Prevent Chrome 67 and earlier from automatically showing the prompt
-	  e.preventDefault();
-	  // Stash the event so it can be triggered later.
-	  deferredPrompt = e;
-	  div.style.display = 'block';
-
-	  button.addEventListener('click', (e) => {
-	  // hide our user interface that shows our A2HS button
-	  div.style.display = 'none';
-	  // Show the prompt
-	  deferredPrompt.prompt();
-	  // Wait for the user to respond to the prompt
-	  deferredPrompt.userChoice
-	    .then((choiceResult) => {
-	      if (choiceResult.outcome === 'accepted') {
-	        console.log('User accepted the A2HS prompt');
-	      } else {
-	        console.log('User dismissed the A2HS prompt');
-	      }
-	      deferredPrompt = null;
-	    });
-	});
-	});
-
-</script>
 
 </body>
 </html>
